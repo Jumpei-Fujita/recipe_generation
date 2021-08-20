@@ -46,11 +46,11 @@ if make_recipe_button:
             st.write(ingr)
             st.subheader('cooking steps（料理手順）')
             st.write(step)
-            """
-            r = 'required ingredients\n'+ingr+'\ncooking steps\n'+step
-            url = 'https://www.deepl.com/ja/translator#en/ja/'+r
-            st.components.v1.html('<a href="'+url+'" class="btn">翻訳</a>')
-            """
+            
+            #r = 'required ingredients\n'+ingr+'\ncooking steps\n'+step
+            #url = 'https://www.deepl.com/ja/translator#en/ja/'+r
+            #st.components.v1.html('<a href="'+url+'" class="btn">翻訳</a>')
+            
             
     else:
         st.write('Please fill in the blanks.(空欄を埋めてください)')
