@@ -23,9 +23,7 @@ ingredients = right_column.text_input('ingredients you want to use(利用した�
 right_column.caption('Enter the ingredients separated by ,(,で区切って入力してください)')
 
 make_recipe_button = st.button('make recipe(料理手順生成)')
-print(name)
-print(ingredients)
-st.components.v1.html('<a href="https://www.google.com/" class="btn">サンプル</a>')
+
 
 if make_recipe_button:
     if (ingredients.replace(' ','') != '') and (name.replace(' ','') != ''):
@@ -48,6 +46,10 @@ if make_recipe_button:
             st.write(ingr)
             st.subheader('cooking steps（料理手順）')
             st.write(step)
+
+            r = 'required ingredients\n'+ingr+'\ncooking steps\n'+step
+            url = 'https://www.deepl.com/ja/translator#en/ja/'+r
+            st.components.v1.html('<a href="'+url+'" class="btn">翻訳</a>')
             
     else:
         st.write('Please fill in the blanks.(空欄を埋めてください)')
